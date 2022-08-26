@@ -36,10 +36,12 @@ namespace InvoiceTester
         {
             InvoiceGenerator invoice = new InvoiceGenerator();
             Ride[] rides = { new Ride(2, 3), new Ride(4, 5), new Ride(5, 6) };
-            invoice.MapUserId("Harshu27", rides);
-            InvoiceSummary summary = invoice.GetInvoiceSummary("Harshu27");
+            invoice.MapUserId("Megha", rides);
+            InvoiceSummary summary = invoice.GetInvoiceSummary("Megha");
             Assert.AreEqual(summary.totalNumberOfRides, 3);
         }
+              
     }
 }
+
 
