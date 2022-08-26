@@ -12,5 +12,14 @@ namespace InvoiceTester
             double actual = invoice.CalculateFare(6, 5);
             Assert.AreEqual(actual, 65);
         }
+
+        [TestMethod]
+        public void InputInInteger_ShouldReturn_MultipleRides_TotalFare()
+        {
+            InvoiceGenerator invoice = new InvoiceGenerator();
+            Ride[] rides = { new Ride(2, 3), new Ride(4, 5) };
+            double result = invoice.CalculateMultipleRides(rides);
+            Assert.AreEqual(result, 23, 45);
+        }
     }
 }
